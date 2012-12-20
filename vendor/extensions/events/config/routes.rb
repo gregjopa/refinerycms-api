@@ -4,7 +4,7 @@ Refinery::Core::Engine.routes.append do
   namespace :events do
     resources :events, :path => '', :only => [:index, :show]
     resources :api, :controller => :events_api, :path => 'integration/api',
-      :except => [:new, :edit]    
+      :except => [:new, :edit], :defaults => { :format => 'json' }    
   end
 
   # Admin routes
