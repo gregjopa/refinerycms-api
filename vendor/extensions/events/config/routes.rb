@@ -3,6 +3,8 @@ Refinery::Core::Engine.routes.append do
   # Frontend routes
   namespace :events do
     resources :events, :path => '', :only => [:index, :show]
+    resources :api, :controller => :events_api, :path => 'integration/api',
+      :except => [:new, :edit]    
   end
 
   # Admin routes
