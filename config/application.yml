@@ -1,0 +1,5 @@
+# store http basic authentication username and password in config file
+# source: http://railscasts.com/episodes/85-yaml-configuration-revised
+
+API_USERNAME: "admin"
+API_PASSWORD: "secret"

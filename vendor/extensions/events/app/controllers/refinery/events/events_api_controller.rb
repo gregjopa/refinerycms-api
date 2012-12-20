@@ -2,6 +2,9 @@ module Refinery
   module Events
     class EventsApiController < ::ApplicationController
  
+      http_basic_authenticate_with name: ENV["API_USERNAME"], password: ENV["API_PASSWORD"],
+        :except => [:index, :show]      
+ 
       respond_to :json
  
       # GET /integration/api.json
